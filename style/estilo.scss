@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+
+$titulo: 28px;
+$tamaño: 500px;
+$margen: 50px;
+$padding: 8px;
+
+.input-group{
+    display: flex;
+    border: 2px;
+    border-radius: 50px;
+    border-style: solid;
+        span{
+            border: 0px;
+            background-color: transparent;
+            i{
+               color: #6A2A83;
+            }
+        }  
+        input{
+            border: 0px;
+            flex-grow: 1;
+        }
+}
+
+*:focus{
+    outline: none;
+}
+
+*{
+    font-family: "nunito", sans-serif;
+}
+
+body{
+    background-color: #22193F;
+    background-image: url(../sources/ondas.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#contenido{
+    height: 100vh;
+    min-height: 500px;
+}
+
+#formulario{
+    height: $tamaño;
+    width: $tamaño;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 400px;
+        font-size: 16px;
+            h3{
+                font-size: $titulo;
+                font-weight: 900;
+                color: #22193F;
+                margin-bottom: $margen;
+            }
+            input{
+                border-color: #C4C4C4;
+                border-radius: 50px;
+                padding: $padding;
+            }
+            button{
+                background-color: #E21982;
+                font-weight: 700;
+                border-radius: 50px;
+                border: 0px;
+                padding: $padding;
+                color: white;
+                margin-top: $margen;
+            }
+            a{
+                color: #E21982;
+                text-align: end;
+                font-weight: 700;
+            }       
+    }
+}
+#admin{
+    height: $tamaño;
+    width: $tamaño;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/sources/img-login.jpg);
+    img{
+        height: 60px;
+    }
+}
