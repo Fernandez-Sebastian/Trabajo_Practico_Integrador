@@ -1,49 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/bootstrap.min.css"> 
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contacto</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-    <title>Contacto</title>
-</head>
-<body>
-    <h1>Formulario de contacto</h1>
-    <div id="contenido" class="row justify-content-center align-items-center ">
-        <form id="formulario-contacto" method="post" class="container-fluid">
-                <div>
-                  <label for="nombre">Ingrese su Nombre.<span>(Éste campo no puede estar vacío  y debe tener al menos 2 letras)</span></label>
-                  <input id="nombre" name="nombre">
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="style/estiloAlternativo.css" />
+    <link rel="stylesheet" href="style/slider.css" />
+  </head>
+  <body id="bodyContacto">
+    <header
+      id="cabecera"
+      class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+    >
+      <a
+        href="index.html"
+        id="logoCabecera"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+      >
+        <span id="logoMenu" class="fs-4">GOVETKU</span
+        ><span>Software Para Veterinarias</span>
+      </a>
+      <ul class="navCabecera nav nav-pills">
+        <li class="nav-item">
+          <a href="index.html" class="linkCabecera nav-link">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="linkCabecera nav-link">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a href="reclamo.html" class="linkCabecera nav-link">Reclamo</a>
+        </li>
+      </ul>
+    </header>
+    <section id="areaContacto" class="espacioParaMenu">
+      <div id="contactoVeterinario"></div>
+      <div id="tituloContacto">
+        <h3><i class="bi bi-envelope-fill"></i> Contacto</h3>
+      </div>
+      <div id="contenido" class="row justify-content-center align-items-center">
+        <div id="formContacto" class="container-fluid">
+          <div class="row-auto justify-content-center">
+            <form
+              id="formulario-contacto"
+              method="post"
+              class="col-md-12"
+              onsubmit="return false;"
+            >
+              <div class="row align-items-start">
+                <span for="nombre" class="col-lg-4 col-sm-12 textoDerecha"
+                  >Ingrese su Nombre</span
+                >
+                <div class="col-lg-4 col-sm-12 inputCentrado separadorInput">
+                  <input id="nombre" name="nombre" />
                 </div>
-                <div>
-                    <label for="apellido">Ingrese su Apellido.<span>(Éste campo no puede estar vacío y debe tener al menos 2 letras)</span></label>
-                    <input id="apellido" name="apellido">
+                <span class="col-lg-4 col-sm-12 textoIzquierda"
+                  ><b>*</b>(Éste campo no puede estar vacío y debe tener al
+                  menos 2 letras)</span
+                >
+              </div>
+              <div class="row align-items-start">
+                <span for="apellido" class="col-lg-4 col-sm-12 textoDerecha"
+                  >Ingrese su Apellido</span
+                >
+                <div class="col-lg-4 col-sm-12 inputCentrado separadorInput">
+                  <input id="apellido" name="apellido" />
                 </div>
-                <div>
-                  <label for="email">Ingrese su E-Mail<span>(Debe ingresar un E-mail vàlido)</span></label>
-                  <input id="email" name="email" >
+                <span class="col-lg-4 col-sm-12 textoIzquierda"
+                  ><b>*</b>(Éste campo no puede estar vacío y debe tener al
+                  menos 2 letras)</span
+                >
+              </div>
+              <div class="row align-items-start">
+                <span for="email" class="col-lg-4 col-sm-12 textoDerecha"
+                  >Ingrese su E-Mail</span
+                >
+                <div class="col-lg-4 col-sm-12 inputCentrado separadorInput">
+                  <input id="email" name="email" />
                 </div>
-                <div>
-                    <label for="comentario">Comentario<span></span></label>
-                    <textarea name="comentario" id="texto" cols="30" rows="10"></textarea>
+                <span class="col-lg-4 col-sm-12 textoIzquierda"
+                  ><b>*</b>(Debe ingresar un E-mail vàlido)</span
+                >
+              </div>
+              <div id="campoComentario" class="row align-items-start">
+                <span for="comentario" class="col-lg-4 col-sm-12 textoDerecha"
+                  >Comentario</span
+                >
+                <div class="col-lg-4 col-sm-12 inputCentrado separadorInput">
+                  <textarea
+                    name="comentario"
+                    id="comentario"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
                 </div>
-                <div>
-                    <button class="botonformulario" onclick="enviarDatos()">ENVIAR</button>
-                </div>
-                <div id="bordes">
-                    <a id="volver" href="/home.html">Volver a la página principal </a>
-                </div>
-        </form>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js "
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
-    <script src="/js/index.js"></script>
-</body>
+              </div>
+              <div id="contenedorBotonFormulario">
+                <button id="botonFormulario">ENVIAR</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container-fluid" id="contenedorFooter">
+        <div id="section">
+          <h3>Cambio de Dolar en Argentina</h3>
+          <button class="btn blue" id="blue">Dolar Blue</button>
+          <button class="btn oficial" id="oficial">Dolar Oficial</button>
+        </div>
+        <div class="section">
+          <div id="resultado"></div>
+        </div>
+      </div>
+      <p>Derechos de autor © 2023 - GOVETKU - Sebastián Fernández</p>
+    </footer>
+    <script src="js/apiDolar.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/contacto.js"></script>
+  </body>
 </html>

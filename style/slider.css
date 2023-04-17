@@ -1,0 +1,100 @@
+/* Estilos del Slider */
+.slidershow{
+    max-width: 100%;
+    position:relative;
+    height: 600px;
+    overflow: hidden;
+    margin-top:0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    --bs-gutter-x: 0rem !important;
+    z-index:80;
+}
+
+.slider img{
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slider li{
+    overflow: hidden;   
+}
+
+.slider li ul{
+    width: 100%;
+}
+
+.slider li img{
+    width: 100%;    
+}
+
+.pagination{
+    position: relative;
+    margin-top: -45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index:90;
+}
+
+.pagination li{
+    font-size: 15px;
+    margin:2px 5px;
+    color:#ffffff;
+    cursor: pointer;
+}
+
+.pagination i{
+    font-size: 15px !important;
+}
+
+.navegacion{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: -350px;
+}
+
+.left, .right{
+    color:#ffffff;
+    font-size: 40px;
+    cursor:pointer;
+    z-index:90;
+    padding: 15px;
+}
+
+.left i, .right i{
+    font-size: 40px !important;
+}
+
+.left{
+    left:10px;
+}
+
+.right{
+    right:10px;
+}
+
+@media (max-width: 1000px){
+    .slidershow{
+        padding-top: 65px;
+        height: 365px;
+    }
+    .slider img{
+        height: 300px;
+    }
+    .pagination{
+        margin-top: -45px;
+    }
+    .pagination i{
+        font-size: 10px !important;
+    }
+    .navegacion{
+        margin-top: -215px;
+    }
+    .left i, .right i{
+        font-size: 25px !important;
+    }
+}

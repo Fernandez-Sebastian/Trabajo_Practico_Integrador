@@ -1,5 +1,7 @@
 // Aquí puedes agregar cualquier script que necesites para hacer tu página más interactiva
-$(document).ready(function() {
+let botonFormulario = document.getElementById("botonFormulario");
+
+$(document).ready(function(){
   $("#formulario-contacto").validate(
       {
           rules: {
@@ -20,7 +22,7 @@ $(document).ready(function() {
               }
          },
          messages: {
-              nombre: {
+              nombre : {
                   required: "Este campo es obligatorio",
                   minlength: "Debe tener al menos 2 letras"
               },
@@ -40,15 +42,13 @@ $(document).ready(function() {
   )
 });
 
-function enviarDatos(){
-  var campoNombre = $('#nombre').val();
-  var campoApellido = $('#apellido').val();
-  var campoEmail = $("#email").val();
-  var campoComentario = $('#texto').val();
-   if(((campoNombre).length>2) && ((campoApellido).length>2) && (campoEmail != "") && (campoComentario != "")){
-    confirm("se ah enviado el mensaje. Muchas gracias, En breve recibirà una respuesta a su mail.");
-    }else{
-      confirm("Hay campos obligatorios por completar")
-    }
-
-  }
+let enviarFormulario = () => {
+  if ($("#nombre").valid() && $("#apellido").valid() && $("#email").valid() && $("#comentario").valid()){
+      document.getElementById("nombre").value= "";  
+      document.getElementById("apellido").value= "";  
+      document.getElementById("email").value= "";
+      document.getElementById("comentario").value= "";  
+      alert("Su consulta ha sido enviada. En breve recibirá una respuesta a su Email ");
+  }  
+}
+botonFormulario.addEventListener("click", enviarFormulario);
