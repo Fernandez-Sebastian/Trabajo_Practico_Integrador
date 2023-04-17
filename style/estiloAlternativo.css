@@ -309,3 +309,11 @@ body{
         padding: 0px 0px 50px 0px;
     }
 }
+
+#areaReclamo{
+    background-image: url(../img/contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+}
