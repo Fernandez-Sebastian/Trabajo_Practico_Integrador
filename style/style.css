@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
 
-
 /* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,6 +10,7 @@ body {
 }
 
 /* Estilos para el header */
+
 header {
     background-color: #333;
     color: #fff;
@@ -18,9 +19,10 @@ header {
 }
 
 /* Estilos para el menú */
+
 nav {
     background-color: #f2f2f2;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #0f100f;
     padding: 10px;
 }
 
@@ -45,57 +47,177 @@ nav a:hover {
 }
 
 /* Estilos para el contenido de la página */
-section {
-    padding: 10px;
+
+.centrar{
+    text-align: center;
+}
+
+.iconoCentrado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+i{
+    font-size: 80px;
+}
+
+p{
+    text-align: center; 
+    font-size: 15px;
+    color: #8a8a8a;
+}
+
+.descripcionCuadro{
+    margin: 0px;
 }
 
 /* Estilos para el formulario de contacto */
-form, div {
-    margin: 20px;
-  }
+
+#formContacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   
-  p.note {
+p.note {
     font-size: 1rem;
     color: red;
-  }
+}
   
-  label {
+label {
     width: 300px;
     font-weight: bold;
     display: inline-block;
     margin-top: 20px;
-  }
-  
-  a{
+}
+
+a{
+    border: none;
     border-radius: 50px;
-  }
-  label span {
+}
+
+#botonVolver{
+    text-decoration: none;
+    color: black;
+    border-radius:5px;
+    border: ridge;
+}
+
+#botonFormulario{
+  text-decoration: none;
+  color: black;
+  border-radius:5px;
+  border: ridge;
+}
+
+#volver{
+  text-decoration: none;
+  color: black;
+  border-radius:5px;
+  border: ridge;
+}
+
+label span {
+  font-size: 1rem;
+}
+
+label.error {
+    color: red;
     font-size: 1rem;
-  }
-  
-  label.error {
-      color: red;
-      font-size: 1rem;
-      display: block;
-      margin-top: 5px;
-  }
-  
-  input.error, textarea.error {
-      border: 1px dashed red;
-      font-weight: 300;
-      color: red;
-  }
+    display: block;
+    margin-top: 5px;
+}
+
+input.error, textarea.error {
+    border: 1px dashed red;
+    font-weight: 300;
+    color: red;
+}
+
 #bordes{
     border: #110000;
     border-radius: 50px;
+}
 
+/* Estilos para el Wizard*/
+
+#tituloReclamo{
+    padding-top: 65px;
+    text-align: center;
+}
+
+#wizard{
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 
+#wizard h4{
+    padding: 5px 0px;
+    display: none;
+}
+
+#wizard h3{
+    padding: 15px 0px;
+    text-align: center;
+}
+
+.wizardFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#paso2{
+    display: none;
+}
+
+#paso3{
+    display: none;
+}
+
+.padding{
+    padding: 5px 5px;
+}
+
+.margin{
+    margin: 5px 0px;
+    border-radius:5px;
+    border: ridge;
+}
+
+#reclamoPaso3, #reclamoPaso2{
+    resize: none;
+}
+
+*:focus{
+    outline:none;
+}
+
+#avisoDeEnvio{
+    text-decoration: underline;
+}
+
 /* Estilos para el footer */
+
+#contenedorFooter{
+    padding: 10px;
+    background-color: black;
+    color: #8a8a8a;;
+}
+
+#oficial, #blue{
+    color: greenyellow;
+}
+
 footer {
-    background-color: #333;
+    height: fit-content;
+    background-color: black;
     color: #fff;
     padding: 10px;
-    text-align: center;
 }
