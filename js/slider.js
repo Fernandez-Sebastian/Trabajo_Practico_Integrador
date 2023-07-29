@@ -8,7 +8,7 @@ for(let i = 1; i<= imgItems; i++){
 
 $(".slider li").hide();
 $(".slider li:first").show();
-$(".pagination li:first").css({"color": "#CD6E2E"});
+$(".pagination li:first").css({"color": "greenyellow"});
 
 $(".pagination li").click(pagination);
 $(".right i").click(nextSlider);
@@ -24,7 +24,7 @@ function pagination(){
     $(".slider li").hide();
     $('.slider li:nth-child('+ paginationPos +')').fadeIn();
 $(".pagination li").css({"color": "#ffffff"});
-    $(this).css({"color": "#CD6E2E"});
+    $(this).css({"color": "greenyellow"});
 
 imgPos =paginationPos;
 }
@@ -36,7 +36,7 @@ if(imgPos >= imgItems){
 }else {imgPos++;}
 
 $(".pagination li").css({"color": "#ffffff"});
-$('.pagination li:nth-child('+ imgPos +')').css({"color": "#CD6E2E"});
+$('.pagination li:nth-child('+ imgPos +')').css({"color": "greenyellow"});
 
     $(".slider li").hide();
     $('.slider li:nth-child('+ imgPos +')').fadeIn();
@@ -48,7 +48,7 @@ function prevSlider(){
     }else {imgPos--;}
     
     $(".pagination li").css({"color": "#ffffff"});
-    $('.pagination li:nth-child('+ imgPos +')').css({"color": "#CD6E2E"});
+    $('.pagination li:nth-child('+ imgPos +')').css({"color": "greenyellow"});
     
         $(".slider li").hide();
         $('.slider li:nth-child('+ imgPos +')').fadeIn();
