@@ -10,3 +10,6 @@ Fernández Sebastián
 
 ~ Creado por Sebastián Fernández - fernandez90dgo@gmail.com
 
+
+link de api actualziado https://dolarapi.com/v1/dolares/blue
+
